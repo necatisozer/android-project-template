@@ -4,6 +4,7 @@ plugins {
     kotlin("kapt")
     id("kotlin-android-extensions")
     id("androidx.navigation.safeargs.kotlin")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -62,6 +63,8 @@ dependencies {
     implementation(Dependencies.AndroidX.ConstraintLayout.constraintLayout)
     implementation(Dependencies.AndroidX.Core.core)
     implementation(Dependencies.AndroidX.Fragment.fragment)
+    implementation(Dependencies.AndroidX.Hilt.viewModel)
+    kapt(Dependencies.AndroidX.Hilt.compiler)
     implementation(Dependencies.AndroidX.Lifecycle.viewModel)
     implementation(Dependencies.AndroidX.Lifecycle.liveData)
     implementation(Dependencies.AndroidX.Lifecycle.common)
@@ -70,6 +73,10 @@ dependencies {
 
     // Material
     implementation(Dependencies.Material.material)
+
+    // Hilt
+    implementation(Dependencies.Dagger.hiltAndroid)
+    kapt(Dependencies.Dagger.hiltAndroidCompiler)
 
     // Test
     testImplementation(Dependencies.JUnit.jUnit)

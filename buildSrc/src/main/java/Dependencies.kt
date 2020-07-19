@@ -26,6 +26,12 @@ object Dependencies {
             const val testing = "androidx.fragment:fragment-testing:$version"
         }
 
+        object Hilt {
+            private const val version = "1.0.0-alpha01"
+            const val viewModel = "androidx.hilt:hilt-lifecycle-viewmodel:$version"
+            const val compiler = "androidx.hilt:hilt-compiler:$version"
+        }
+
         object Lifecycle {
             private const val version = "2.3.0-alpha05"
             const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$version"
@@ -71,6 +77,12 @@ object Dependencies {
     object Material {
         private const val version = "1.3.0-alpha01"
         const val material = "com.google.android.material:material:$version"
+    }
+
+    object Dagger {
+        const val version = "2.28-alpha"
+        const val hiltAndroid = "com.google.dagger:hilt-android:$version"
+        const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:$version"
     }
 
     object Tools {
